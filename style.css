@@ -1,0 +1,729 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* ページ全体 */
+body {
+    margin: 0;
+    background-color: #111111;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* 上のメニュー部分 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #181818;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+
+/*FS工業*/
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.header-logo img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.company-name {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+/*メニュー*/
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/*最初に見える大きな部分*/
+.hero {
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+        url("images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #c9a7eb;
+}
+
+.f-color {
+    color: #00e676;
+}
+
+.s-color {
+    color: #c9a7eb;
+}
+
+.contact-button {
+    margin-top: 25px;
+    padding: 14px 28px;
+    background-color: #00e676;
+    color: #111111;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.contact-button:hover {
+    opacity: 0.8;
+}
+
+.hero-subtitle {
+    color: #003676;
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.services {
+    color: white;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+/*事業内容*/
+.business {
+    padding: 80px 6%;
+    text-align: center;
+    background-color: #111111;
+}
+
+.section-subtitle {
+    color: #00e676;
+    font-size: 14px;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+
+.business > h2 {
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+/*5つのカード*/
+.business-list {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 18px;
+}
+
+.business-card {
+    background-color: #1c1c1c;
+    padding: 30px 20px;
+    border-radius: 10px;
+    border-top: 3px solid #00e676;
+    transition: 0.3s;
+}
+
+.business-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.business-card .card-link,
+.business-card .service-link {
+    margin-top: auto;
+}
+
+.business-card h3 {
+    font-size: 22px;
+    margin-top: 0;
+    color: white;
+}
+
+.business-card p {
+    color: #cccccc;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+
+.service-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-link {
+    margin-top: auto;
+}
+
+/*マウス乗せたとき*/
+.business-card:hover {
+    transform: translateY(-8px);
+}
+
+/*会社概要*/
+.company {
+    padding: 80px 6%;
+    background-color: #161616;
+    text-align: center;
+}
+
+.company > h2 {
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.company-info {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.company-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    padding: 22px 0;
+    border-bottom: 1px solid #444;
+}
+
+.company-row span {
+    color: #00e676;
+    font-weight: bold;
+}
+
+.company-row p {
+    margin: 0;
+    color: #eeeeee;
+}
+
+/*お問い合わせ*/
+.contact {
+    padding: 100px 20px;
+    background-color: #0d0d0d;
+    text-align: center;
+}
+
+.contact-text {
+    color: #cccccc;
+    font-size: 17px;
+    line-height: 2;
+    margin-bottom: 35px;
+}
+
+.contact .contact-button {
+    display: inline-block;
+    padding: 16px 35px;
+    background-color: #00e676;
+    color: #111111;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.contact .contact-button:hover {
+    transform: translateY(-3px);
+    opacity: 0.85;
+}
+
+/*メニューボタン*/
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/*お問い合わせフォーム*/
+.contact-form {
+    max-width: 700px;
+    margin: 40px auto 0;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: white;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    background-color: #1c1c1c;
+    color: white;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #00e676;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    display: block;
+    margin: 35px auto 0;
+    padding: 16px 45px;
+    background-color: #00e676;
+    color: #111111;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-button:hover {
+    transform: translateY(-3px);
+    opacity: 0.85;
+}
+
+.form-group select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.form-group select:focus {
+    outline: none;
+    border-color: #00e676;
+}
+
+/*フッター*/
+footer {
+    padding: 50px 20px;
+    background-color: #080808;
+    text-align: center;
+    border-top: 1px solid #222222;
+}
+
+.footer-logo {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #aaaaaa;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+footer small {
+    color: #666666;
+    font-size: 12px;
+}
+
+/*送信完了ページ*/
+.thanks {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #111111;
+    text-align: center;
+}
+
+.thanks-content {
+    max-width: 700px;
+}
+
+.thanks-content h1 {
+    font-size: 36px;
+    margin: 10px 0 20px;
+}
+
+.thanks-content > p:not(.section-subtitle) {
+    color: #cccccc;
+    font-size: 17px;
+    line-height: 2;
+    margin-bottom: 35px;
+}
+
+.thanks-buttom {
+    display: inline-block;
+    padding: 16px 35px;
+    background-color: #00e676;
+    color: #111111;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.thanks-buttom:hover {
+    transform: translateY(-0.3px);
+    opacity: 0.85;
+}
+
+/*定期点検*/
+.inspection {
+    padding: 100px 6%;
+    background-color: #0d0d0d;
+    text-align: center;
+}
+
+.inspection > h2 {
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.inspection-intro {
+    max-width: 750px;
+    margin: 0 auto 50px;
+    color: #cccccc;
+    font-size: 17px;
+    line-height: 2;
+}
+
+.inspection-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.inspection-card {
+    background-color: #181818;
+    padding: 30px 25px;
+    border-radius: 10px;
+    border: 1px solid #333333;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.inspection-card h3 {
+    color: #00e676;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.business-card p {
+    color: #cccccc;
+    font-size: 15px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.inspection-card:hover {
+    transform: translateY(-5px);
+    border-color: #00e676;
+}
+
+.card-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: #00e676;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.card-link:hover {
+    transform: translateX(-5px);
+}
+
+.inspection-contact-button {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 16px 32px;
+    background-color: #00e676;
+    color: #111111;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.inspection-contact-button:hover {
+    transform: translateY(-3px);
+    opacity: 0.85;
+}
+
+.inspection-record {
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding: 25px 30px;
+    background-color: #151515;
+    border-left: 4px solid #00e676;
+    text-align: left;
+}
+
+.inspection-record h3 {
+    margin: 0 0 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.inspection-record p {
+    margin: 0;
+    color: #cccccc;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.record-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.flow-item {
+    flex: 1;
+    text-align: center;
+    padding: 20px 10px;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+}
+
+.flow-item span {
+    display: block;
+    color: #00e676;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.flow-item strong {
+    display: block;
+    color: #ffffff;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.flow-item p {
+    color: #aaaaaa;
+    font-size: 13px;
+    margin: 0;
+}
+
+.flow-arrow {
+    color: #00e676;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.phone-link {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: #00e676;
+    text-underline-offset: 4px;
+}
+
+.phone-link:hover {
+    color: #00e676;
+}
+
+/*スマホ表示*/
+@media (max-width: 768px) {
+    header {
+        flex-direction: row;
+        gap: 0;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .header-logo {
+        flex-shrink: 0;
+    }
+
+    .company-name {
+        white-space: nowrap;
+    }
+
+    .menu-button {
+        margin-left: auto;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        flex-basis: 100%;
+        gap: 0;
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    nav a {
+        width: 100%;
+        padding: 15px 0;
+        text-align: center;
+        border-top: 1px solid #333333;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 0 20px;
+    }
+
+    .hero h2 {
+        font-size: 34px;
+    }
+
+    .services {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .business-list {
+        grid-template-columns: 1fr;
+    }
+
+    .business {
+        padding: 60px 20px;
+    }
+
+    .company {
+        padding: 60px 20px;
+    }
+
+    .company-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .contact {
+        padding: 70px 20px;
+    }
+
+    .contact > h2 {
+        font-size: 30px;
+    }
+
+    .contact-text {
+        font-size: 15px;
+    }
+
+    .contact-text br {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    footer {
+        padding: 40px 20px;
+    }
+
+    footer p {
+        line-height: 1.8;
+    }
+
+    .thanks-content h1 {
+        font-size: 28px;
+    }
+
+    .thanks-content > p:not(.section-subtitle) {
+        font-size: 15px;
+    }
+
+    .inspection {
+        padding: 70px 20px;
+    }
+
+    .inspection > h2 {
+        font-size: 30px;
+    }
+
+    .inspection-intro {
+        font-size: 15px;
+        margin-bottom: 35px;
+    }
+
+    .inspection-list {
+        grid-template-columns: 1fr;
+    }
+
+    .inspection-card {
+        padding: 25px 20px;
+    }
+
+    .record-flow {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .flow-item {
+        width: 100%;
+    }
+
+    .flow-arrow {
+        transform: rotate(90deg);
+    }
+}
